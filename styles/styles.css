@@ -11,6 +11,12 @@
     justify-content: center;
 }
 
+.login {
+    background-image: url(../assets/bg-app.jpeg);
+    opacity: .88;
+    height: 100%;
+}
+
 .title-app {
     position: absolute;
     z-index: 999;
@@ -44,15 +50,23 @@
     background: #ffa800 !important;
     font-size: 20px;
     padding: 20px;
+    margin-right: 1em;
 }
 
-.btn-danger {
+.btn-dangers {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
     padding: 16px;
     margin-left: 1em;
     font-size: 20px;
+}
+
+.card-login {
+    padding: 2em;
+    transform: translateY(6em);
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px !important;
 }
 
 form button.btn-danger:hover {

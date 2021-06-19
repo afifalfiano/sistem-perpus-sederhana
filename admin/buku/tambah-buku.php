@@ -12,53 +12,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD PHP DAN MYSQL</title>
+    <title>Sistem Perpustakaan</title>
+    <link rel="stylesheet" href="../../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <script src="../../scripts/bootstrap.min.js"></script>
+    <script src="../../scripts/jquery.min.js"></script>
 </head>
 <body>
-    <h2>Tambah User </h2>
-    <a href="buku.php">Kembali</a>
-    <br>
+<div class="container-fluid bg-primary text-white p-3 text-center d-flex  justify-content-center fixed-top main-book">
+        <div class="title"><h1>Tambah Buku</h1></div>
+    </div>
+    <div class="container main-book">
+        <ul class="nav nav-pills mt-4">
+        <li class="nav-item">
+            <a class="nav-link" href="buku.php">Kembali</a>
+        </li>
+        <li class="nav-item">
+            <form action="../../auth/logout.php" method="post">
+            <button class="btn btn-outline-warning">Logout</button>
+            </form>
+        </li>
+        </ul>
+        <hr>
+    </div>
+    <div class="container">
     <form action="proses-tambah.php" method="post">
-        <table>
-            <tr>
-                <td>Judul Buku</td>
-                <td><input type="text" name="judul"></td>
-            </tr>
-            <tr>
-                <td>Pengarang</td>
-                <td><input type="text" name="pengarang"></td>
-            </tr>
-            <tr>
-                <td>Tahun Terbit</td>
-                <td><input type="number" name="tahun_terbit"></td>
-            </tr>
-            <tr>
-                <td>Penerbit</td>
-                <td><input type="text" name="penerbit"></td>
-            </tr>
-            <tr>
-            <td>Kategori</td>
-            <td><select name="kategori" id="">
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
+    <input type="text" class="form-control" name="judul">
+    </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Pengarang</label>
+    <input type="text" class="form-control" name="pengarang">
+    </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Tahun Terbit</label>
+    <input type="number" class="form-control" name="tahun_terbit">
+    </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Penerbit</label>
+    <input type="text" class="form-control" name="penerbit">
+    </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Kategori</label>
+    <select name="kategori" id="" class="form-control">
             <?php echo $options; ?>
-            </select></td>
-            </tr>            
-            <tr>
-                <td>Status</td>
-                <td>
-                <select name="status">
+    </select>
+    </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Status</label>
+    <select name="status" class="form-control">
                     <option value="0">Pilih status</option>
                     <option value="1">Tersedia</option>
                     <option value="2">Tidak Tersedia</option>
                     <option value="3">Dipinjam</option>
                     <option value="4">Selesai</option>
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Simpan"></td>
-            </tr>
-        </table>
+    </select>
+    </div>
+    <div class="d-grid gap-2">
+    <input type="submit" class="btn btn-primary btn-block" value="Simpan">
+    </div>
     </form>
+    </div>
 </body>
 </html>

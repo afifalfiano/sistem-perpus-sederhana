@@ -28,7 +28,7 @@
         </div>
         <div>
         <form action="../auth/logout.php" method="post">
-        <button class="btn btn-danger">Logout</button>
+        <button class="btn btn-dangers">Logout</button>
         </form>
         </div>
     </div>

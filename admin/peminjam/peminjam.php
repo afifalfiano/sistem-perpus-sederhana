@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistem Perpustakaan</title>
+    <link rel="stylesheet" href="../../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <script src="../../scripts/bootstrap.min.js"></script>
+    <script src="../../scripts/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Daftar Peminjam Buku</h1>
-    <a href="../index.php">Kembali</a>
-    <hr>
-   <table border="1">
+<div class="container-fluid bg-primary text-white p-3 text-center d-flex  justify-content-center fixed-top main-book">
+        <div class="title"><h1>Daftar Peminjam Buku Perpustakaan</h1></div>
+    </div>
+    <div class="container main-book">
+        <ul class="nav nav-pills mt-4">
+        <li class="nav-item">
+            <a class="nav-link" href="../index.php">Kembali</a>
+        </li>
+        <li class="nav-item">
+            <form action="../../auth/logout.php" method="post">
+            <button class="btn btn-outline-warning">Logout</button>
+            </form>
+        </li>
+        </ul>
+        <hr>
+    </div>
+    <div class="container table-responsive ">
+   <table class="table table-striped">
     <tr>
         <th>No</th>
         <th>Nama Peminjam</th>
@@ -41,5 +59,6 @@
         }
         ?>
    </table>
+    </div>
 </body>
 </html>
