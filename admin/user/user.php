@@ -7,6 +7,7 @@
     <title>Sistem Perpustakaan</title>
     <link rel="stylesheet" href="../../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/css/all.css">
     <script src="../../scripts/bootstrap.min.js"></script>
     <script src="../../scripts/jquery.min.js"></script>
 </head>
@@ -59,8 +60,8 @@
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['otoritas'] ?></td>
             <td>
-                <a href="edit-user.php?id=<?php echo $row['id']; ?>">EDIT</a>
-                <a href="hapus-user.php?id=<?php echo $row['id']; ?>">HAPUS</a>
+                <a href="edit-user.php?id=<?php echo $row['id']; ?>"><i class="fas fa-pen-square" style="font-size:1.6em; color: orange;"></i></a>
+                <a href="hapus-user.php?id=<?php echo $row['id']; ?>"><i class="fas fa-minus-square" style="font-size:1.6em;color: red"></i></a>
             </td>
             </tr>
             <?php

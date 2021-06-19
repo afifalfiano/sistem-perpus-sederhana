@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Perpustakaan</title>
+    <link rel="stylesheet" href="../../styles/css/all.css">
     <link rel="stylesheet" href="../../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../../styles/styles.css">
     <script src="../../scripts/bootstrap.min.js"></script>
@@ -55,8 +56,8 @@
             <td><?php echo $row['nama_kategori'] ?></td>
             <td><?php echo $row['status'] ?></td>
             <td>
-                <a href="edit-buku.php?id=<?php echo $row['id']; ?>">EDIT</a>
-                <a href="hapus-buku.php?id=<?php echo $row['id']; ?>">HAPUS</a>
+                <a href="edit-buku.php?id=<?php echo $row['id']; ?>"><i class="fas fa-pen-square" style="font-size:1.6em; color: orange;"></i></a>
+                <a href="hapus-buku.php?id=<?php echo $row['id']; ?>"><i class="fas fa-minus-square" style="font-size:1.6em;color: red"></i></a>
             </td>
             </tr>
             <?php

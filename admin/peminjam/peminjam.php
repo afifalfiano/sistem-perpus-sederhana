@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Perpustakaan</title>
+    <link rel="stylesheet" href="../../styles/css/all.css">
     <link rel="stylesheet" href="../../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../../styles/styles.css">
     <script src="../../scripts/bootstrap.min.js"></script>
@@ -52,7 +53,7 @@
             <td><?php echo $row['tgl_kembali'] ?></td>
             <td><?php echo $row['status'] ?></td>
             <td>
-                <a href="kembalikan-buku.php?id=<?php echo $row['id']; ?>">KEMBALIKAN</a>
+                <a href="kembalikan-buku.php?id=<?php echo $row['id']; ?>"><i class="fas fa-check-circle" style="font-size:1.6em; color: green"></i></a>
             </td>
             </tr>
             <?php
