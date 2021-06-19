@@ -21,7 +21,7 @@
     position: absolute;
     z-index: 999;
     width: 100%;
-    transform: translateY(15em);
+    transform: translateY(12em);
     align-content: center;
     justify-content: center;
 }
