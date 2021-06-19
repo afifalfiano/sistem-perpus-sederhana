@@ -10,7 +10,7 @@ if ($connect -> connect_error) {
     die("Connection failed!: " . $connect->connect_error);
 }
 
-echo "Connected Successfully";
+echo "<script>console.log('Connected Successfully')</script>";
 
 
 ?>
