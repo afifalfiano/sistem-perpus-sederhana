@@ -3,8 +3,9 @@
     session_start();
     if(isset($_SESSION['username'])) {
         echo "Selamat Datang";
+        echo $_COOKIE['username'];
     } else {
-        header('location:../login.php');
+        header('location:../auth/login.php');
     }
 
 ?>
@@ -27,7 +28,7 @@
     <li><a href="kategori-buku/kategori-buku.php">Kategori</a></li>
     <li><a href="peminjam/peminjam.php">Daftar Peminjam</a></li>
     </ul>
-    <form action="../logout.php" method="post">
+    <form action="../auth/logout.php" method="post">
     <button class="btn btn-warning">Logout</button>
     </form>
 </body>

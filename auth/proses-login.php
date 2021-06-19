@@ -10,10 +10,26 @@ if($row['email'] == $email AND $row['password'] == $password) {
     echo "<script>alert('Berhasil Login');</script>";
     session_start();
     $_SESSION['id'] = $row['id'];
-    $_SESSION['username'] = $row['username'];
     $_SESSION['password'] = $row['password'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['otoritas'] = $row['otoritas'];
+    
+    $idUser = $row['id'];
+    $username = $row['username'];
+    $email = $row['email'];
+    $otoritas = $row['otoritas'];
+    $alamat = $row['alamat'];
+    $telepon = $row['telepon'];
+    $namaLengkap = $row['nama_lengkap'];
+
+    setcookie('id_user', $idUser, time() + (86400 * 30), "/");
+    setcookie("username", $username , time() + (86400 * 30), "/");
+    setcookie("email", $email , time() + (86400 * 30), "/");
+    setcookie("otoritas", $otoritas , time() + (86400 * 30), "/");
+    setcookie("alamat", $alamat , time() + (86400 * 30), "/");
+    setcookie("telepon", $telepon , time() + (86400 * 30), "/");
+    setcookie("nama_lengkap", $namaLengkap , time() + (86400 * 30), "/");
+
     if($row['otoritas'] == 'ADMIN') {
         header('location:../admin/index.php');
     } else {
